@@ -1,0 +1,7 @@
+.advantages {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 100px);
+  position: relative;
+  padding: 450px 0px 100px 0px;
+}/*# sourceMappingURL=advantagesBox.css.map */

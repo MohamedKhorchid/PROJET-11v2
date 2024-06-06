@@ -1,0 +1,48 @@
+.accounts {
+    &__background {
+        background-color: white;
+        width: calc(100% - 300px);
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+
+    &__identity {
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0px 15px 0px;
+
+        &__name {
+            font-size: 18px;
+            color:  rgb(18, 3, 45);
+        }
+
+        &__amount {
+            font-size: 40px;
+            font-weight: bold;
+            color:  rgb(18, 3, 45);
+        }
+
+        &__balance {
+            font-size: 18px;
+            color:  rgb(18, 3, 45);
+        }
+    }
+
+    &__transactions {
+        margin-right: 25px;
+
+        &__button {
+            background-color: rgb(61, 178, 116);
+            padding: 10px 25px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+        }
+    }
+}

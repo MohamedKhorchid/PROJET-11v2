@@ -1,0 +1,20 @@
+.footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__text {
+        padding-bottom: 10px;
+        margin-top: -5px;
+    }
+
+    &::before {
+        content: "";
+        border-top: 1px solid rgb(165, 165, 165);
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: -30px;
+    }
+}

@@ -1,0 +1,19 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.welcome__text {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+.welcome__text__edit {
+  background-color: rgb(61, 178, 116);
+  padding: 13px 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}/*# sourceMappingURL=welcome.css.map */

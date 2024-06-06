@@ -1,0 +1,19 @@
+.navigation {
+    &__list {
+        list-style-type: none;
+
+        &__item {
+            color: rgb(61, 61, 61);
+            font-weight: bold;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-user-circle {
+    margin-right: 5px;
+    color: black;
+}

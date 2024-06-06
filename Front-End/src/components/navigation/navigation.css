@@ -1,0 +1,16 @@
+.navigation__list {
+  list-style-type: none;
+}
+.navigation__list__item {
+  color: rgb(61, 61, 61);
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa-user-circle {
+  margin-right: 5px;
+  color: black;
+}/*# sourceMappingURL=navigation.css.map */

@@ -1,0 +1,39 @@
+.description {
+  width: 100%;
+  position: relative;
+}
+.description__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 390px;
+}
+.description__image__background {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.description__text {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  background-color: white;
+  width: 370px;
+  height: 210px;
+}
+.description__text__title {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+  padding: 5px 30px;
+  width: calc(100% - 40px);
+}
+.description__text__subtitle {
+  font-size: 18px;
+  color: rgb(63, 63, 63);
+  padding: 0px 30px;
+  width: 280px;
+  margin-top: -10px;
+}/*# sourceMappingURL=description.css.map */
