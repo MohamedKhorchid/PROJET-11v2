@@ -1,6 +1,36 @@
-const initialState = { user: "Prénom de l'utilisateur" }
+import { USER_LOGIN_SUCCESS, USER_LOGIN_FAILURE, LOGOUT_USER } from "../actions/authentication.action.js"
 
-export default function authentificationReducer(state = initialState, action) {
-    // comportement visible suite à une action
-    return state;
+const initialState = {
+    loginError: null,
+    isAuthenticated: false,
 }
+
+const authentificationReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case USER_LOGIN_SUCCESS:
+            return {
+                ...state,
+                loginError: null,
+                isAuthenticated: true,
+            }
+        
+        case USER_LOGIN_FAILURE:
+            return {
+                ...state,
+                loginError: action.payload,
+                isAuthenticated: false,
+            }
+
+        case LOGOUT_USER:
+            return {
+                ...state,
+                loginError: null,
+                isAuthenticated: false,
+            }
+
+        default:
+            return state
+    }
+}
+
+export default authentificationReducer

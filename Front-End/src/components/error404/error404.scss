@@ -1,0 +1,16 @@
+.error404 {
+
+    &__text {
+        width: 330px;
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+    }
+
+    &__redirect {
+        color: white;
+        font-style: italic;
+    }
+}
+

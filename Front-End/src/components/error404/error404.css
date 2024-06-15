@@ -1,0 +1,11 @@
+.error404__text {
+  width: 330px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+.error404__redirect {
+  color: white;
+  font-style: italic;
+}/*# sourceMappingURL=error404.css.map */

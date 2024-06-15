@@ -5,3 +5,17 @@
     position: relative;
     padding: 450px 0px 100px 0px;
 }
+
+@media screen and (max-width: 768px) {
+    .advantages {
+        flex-direction: column;
+        width: calc(100%);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .advantages {
+        width: 100%;
+        flex-direction: column;
+    }
+}

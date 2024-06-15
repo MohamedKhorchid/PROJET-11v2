@@ -1,4 +1,10 @@
 .logo__style {
   width: 200px;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo__style {
+    width: 150px;
+  }
 }/*# sourceMappingURL=logo.css.map */

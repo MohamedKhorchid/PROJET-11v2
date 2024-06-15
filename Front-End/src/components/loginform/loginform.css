@@ -54,6 +54,13 @@
   margin-top: -3px;
   color: rgb(78, 78, 78);
 }
+.form__error__message {
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  margin-top: -7px;
+  margin-bottom: 10px;
+}
 
 .remember__box {
   display: flex;

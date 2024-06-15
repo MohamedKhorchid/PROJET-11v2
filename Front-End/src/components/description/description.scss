@@ -41,3 +41,13 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .description {
+
+        &__text {
+            right: 50px;
+            width: 290px;
+        }
+    }
+}

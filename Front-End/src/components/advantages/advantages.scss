@@ -1,4 +1,5 @@
 .advantages {
+
     &__detail {
         width: calc(100% / 3);
         display: flex;
@@ -37,5 +38,64 @@
     &__image {
         width: 100px;
         height: 100px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .advantages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__detail {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+
+            &__titlesubtitle {
+                margin-left: 0;
+                width: 300px;
+            }
+
+            &__image {
+                margin-left: 0;
+                width: 100px;
+                height: 100px;
+            }
+
+            &__subtitle {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .advantages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__detail {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+
+            &__titlesubtitle {
+                margin-left: 0;
+                width: 300px;
+            }
+
+            &__image {
+                margin-left: 0;
+                width: 100px;
+                height: 100px;
+            }
+
+            &__subtitle {
+                width: 100%;
+            }
+        }
     }
 }

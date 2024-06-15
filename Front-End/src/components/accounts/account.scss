@@ -46,3 +46,35 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .accounts {
+        &__background {
+            width: calc(100% - 40px);
+        }
+
+        &__identity {
+
+            &__name {
+                font-size: 12px;
+            }
+
+            &__amount {
+                font-size: 28px;
+            }
+
+            &__balance {
+                font-size: 12px;
+            }
+        }
+
+        &__transactions {
+            margin-right: 10px;
+
+            &__button {
+                font-size: 12px;
+                padding: 5px 15px;
+            }
+        }
+    }
+}

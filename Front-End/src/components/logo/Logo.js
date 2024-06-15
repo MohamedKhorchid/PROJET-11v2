@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import websiteLogo from "../logo/argentBankLogo.png"
+import websiteLogo from "../logo/argentBankLogo (1).webp"
 import "../logo/logo.css"
  
 function Logo() {

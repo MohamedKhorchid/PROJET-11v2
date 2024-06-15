@@ -5,6 +5,7 @@ import User from "../src/pages/user/User"
 import ErrorPage from "../src/pages/error/ErrorPage"
 import Header from "./components/header/Header";
 import Footer from "../src/components/footer/Footer"
+import PrivateRoute from "./PrivateRoute";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
           <Routes>
             <Route path="/" Component={Home}></Route>
             <Route path="/sign-in" Component={Signin}></Route>
-            <Route path="/user" Component={User}></Route>
+            <Route element={<PrivateRoute/>}>
+              <Route path="/user" Component={User}></Route>
+            </Route>
             <Route path="*" Component={ErrorPage}></Route>
           </Routes>
         <Footer/>

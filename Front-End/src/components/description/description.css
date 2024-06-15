@@ -36,4 +36,11 @@
   padding: 0px 30px;
   width: 280px;
   margin-top: -10px;
+}
+
+@media screen and (max-width: 768px) {
+  .description__text {
+    right: 50px;
+    width: 290px;
+  }
 }/*# sourceMappingURL=description.css.map */

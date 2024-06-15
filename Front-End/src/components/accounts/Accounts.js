@@ -1,12 +1,12 @@
 import "../accounts/account.css"
 
-function Accounts({ accountName, accountAmount }) {
+function Accounts({ accountName, accountAmount, accountBalance }) {
     return(
         <div className="accounts__background">
             <div className="accounts__identity">
                 <span className="accounts__identity__name">{accountName}</span>
                 <span className="accounts__identity__amount">{accountAmount}</span>
-                <span className="accounts__identity__balance">Available Balance</span>
+                <span className="accounts__identity__balance">{accountBalance}</span>
             </div>
             
 

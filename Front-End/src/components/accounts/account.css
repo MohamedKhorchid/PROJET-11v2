@@ -37,4 +37,26 @@
   font-weight: bold;
   font-size: 18px;
   border: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .accounts__background {
+    width: calc(100% - 40px);
+  }
+  .accounts__identity__name {
+    font-size: 12px;
+  }
+  .accounts__identity__amount {
+    font-size: 28px;
+  }
+  .accounts__identity__balance {
+    font-size: 12px;
+  }
+  .accounts__transactions {
+    margin-right: 10px;
+  }
+  .accounts__transactions__button {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
 }/*# sourceMappingURL=account.css.map */

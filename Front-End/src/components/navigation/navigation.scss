@@ -11,9 +11,39 @@
 
 a {
     text-decoration: none;
+    color: rgb(61, 61, 61);
+    font-weight: bold;
 }
 
 .fa-user-circle {
     margin-right: 5px;
     color: black;
+}
+
+
+.signout__list {
+    display: flex;
+    flex-direction: row;
+
+    &__item {
+        margin-right: 15px;
+    }
+}
+
+.fa-sign-out {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        margin-left: -16px;
+    }
+    .signout__list {
+       
+        &__item {
+            font-size: 12px;
+            margin-right: 0;
+            margin-left: 15px;
+        }
+    }
 }

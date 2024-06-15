@@ -4,3 +4,11 @@
       margin-left: 20px;
    }
 }
+
+@media screen and (max-width: 1024px) {
+   .logo {
+      &__style {
+         width: 150px;
+      }
+   }
+}

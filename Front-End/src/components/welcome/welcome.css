@@ -9,6 +9,8 @@
   color: white;
   font-size: 30px;
   font-weight: bold;
+  width: 250px;
+  text-align: center;
 }
 .welcome__text__edit {
   background-color: rgb(61, 178, 116);
@@ -16,4 +18,54 @@
   color: white;
   font-size: 14px;
   font-weight: bold;
+}
+
+.edit__form {
+  display: flex;
+  flex-direction: column;
+}
+.edit__form__title {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+.edit__form__label {
+  color: white;
+  margin-right: 10px;
+}
+.edit__form__label__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.edit__form__buttons__style {
+  background-color: rgb(61, 178, 116);
+  border: none;
+  padding: 15px 60px;
+  border-radius: 3px;
+  margin-top: 40px;
+  margin-right: 10px;
+  color: white;
+  font-weight: 500;
+}
+.edit__form__input {
+  border-radius: 5px;
+  height: 29px;
+  width: 155px;
+}
+.edit__form__input__unchanged {
+  border-radius: 5px;
+  height: 29px;
+  width: 155px;
+  background-color: rgb(214, 214, 214);
+  color: rgb(143, 143, 143);
+}
+
+.label__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=welcome.css.map */

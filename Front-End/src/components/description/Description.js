@@ -1,4 +1,4 @@
-import bankTree from "../description/bank-tree.jpeg"
+import bankTree from "../description/bank-tree (1).webp"
 import "../description/description.css"
 
 function Description() {

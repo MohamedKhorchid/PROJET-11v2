@@ -1,7 +1,10 @@
+import Error404 from "../../components/error404/Error404";
+import "../error/errorpage.css"
+
 function ErrorPage() {
     return(
-        <div>
-
+        <div className="errorpage__background">
+            <Error404/>
         </div>
     )
 }
