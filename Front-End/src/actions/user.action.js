@@ -16,14 +16,14 @@ export const fetchUserProfile = () => {
             
         .then((response) => {
             if (response.ok) {
-                return response.json();
+                return response.json()
             } else {
-                throw new Error("Failed to fetch user profile");
+                console.log("Failed to fetch user profile")
             }
         })
             
         .then((data) => {
-            const userProfile = data.body;
+            const userProfile = data.body
             dispatch({
                 type: USER_PROFILE,
                 payload: userProfile,
@@ -37,7 +37,7 @@ export const fetchUserProfile = () => {
 }
 
 
-export const updateUserName = (userName) => {
+export const updateUserName = (userName, navigate) => {
     return (dispatch) => {
         let token = localStorage.getItem("token") || sessionStorage.getItem("token")
 
@@ -56,8 +56,12 @@ export const updateUserName = (userName) => {
                     type: UPDATE_USER_NAME,
                     payload: userName,
                 })
+            } else if (response.status === 401) {
+                localStorage.removeItem("token")
+                sessionStorage.removeItem("token")
+                navigate("/sign-in")
             } else {
-                throw new Error("Failed to update user name")
+                console.log("Failed to update user name")
             }
         })
     

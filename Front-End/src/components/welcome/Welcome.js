@@ -3,6 +3,7 @@ import { fetchUserProfile, updateUserName } from "../../actions/user.action.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Welcome() {
     const userProfile = useSelector((state) => state.user.userProfile)
@@ -20,17 +21,19 @@ function Welcome() {
 
 
 
-    const dispatch = useDispatch()
-
     function cancelButtonClick(e) {
         e.preventDefault()
         setIsEditing(false)
         setNewUserName(userProfile.userName)
     }
 
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     function saveButtonClick(e) {
         e.preventDefault()
-        dispatch(updateUserName(newUserName))
+        dispatch(updateUserName(newUserName, navigate))
         setIsEditing(false)
     }
 
