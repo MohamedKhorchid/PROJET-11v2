@@ -122,7 +122,7 @@ paths:
         - in: path
           name: accountsId
           required: true
-          type: string
+          type: integer
           description: ID of the account selected
       produces:
         - application/json
@@ -150,12 +150,12 @@ paths:
         - in: path
           name: transactionId
           required: true
-          type: string
+          type: integer
           description: ID of the transaction to update 
         - in: path
           name: accountsId
           required: true
-          type: string
+          type: integer 
           description: ID of the account selected
         - in: body
           name: category
@@ -191,12 +191,12 @@ paths:
         - in: path
           name: transactionId
           required: true
-          type: string
+          type: integer
           description: ID of the transaction to update
         - in: path
           name: accountsId
           required: true
-          type: string
+          type: integer
           description: ID of the account selected
         - in: body
           name: note
@@ -230,26 +230,20 @@ paths:
         - in: path
           name: transactionId
           required: true
-          type: string
+          type: integer
           description: ID of the transaction to update
         - in: path
           name: accountsId
           required: true
-          type: string
+          type: integer
           description: ID of the account selected
-        - in: body
-          name: note
-          description: Note payload
-          required: true
-          schema:
-            $ref: '#/definitions/Note'
       produces:
         - application/json
       responses:
         '200':
           description: Note added to transaction successfully
           schema:
-            $ref: '#/definitions/ApiResponse'
+            $ref: '#/definitions/Note'
         '400':
           description: Invalid Fields
         '401':
@@ -324,7 +318,7 @@ definitions:
     type: object
     properties:
       id:
-        type: string
+        type: integer
       amount:
         type: number
       category:
@@ -341,5 +335,3 @@ definitions:
     properties:
       note:
         type: string
-
-
