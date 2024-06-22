@@ -1,8 +1,9 @@
 import { Navigate } from "react-router-dom";
 import User from "./pages/user/User";
+import { useSelector } from "react-redux";
 
 function PrivateRoute() {
-    let token = localStorage.getItem("token") || sessionStorage.getItem("token")
+    const token = useSelector((state) => state.auth.token)
 
     return (
         <div>

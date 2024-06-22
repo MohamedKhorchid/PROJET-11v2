@@ -1,11 +1,11 @@
+import { logoutUser } from "./authentication.action";
+
 export const USER_PROFILE = "USER_PROFILE";
 export const UPDATE_USER_NAME = "UPDATE_USER_NAME";
 
 
-export const fetchUserProfile = () => {
+export const fetchUserProfile = (token) => {
     return (dispatch) => {
-        let token = localStorage.getItem("token") || sessionStorage.getItem("token");
-
         fetch("http://localhost:3001/api/v1/user/profile", {
             method: "POST",
             headers: {
@@ -37,10 +37,8 @@ export const fetchUserProfile = () => {
 }
 
 
-export const updateUserName = (userName, navigate) => {
+export const updateUserName = (userName, navigate, token) => {
     return (dispatch) => {
-        let token = localStorage.getItem("token") || sessionStorage.getItem("token")
-
         fetch("http://localhost:3001/api/v1/user/profile", {
             method: "PUT",
             headers: {
@@ -57,8 +55,7 @@ export const updateUserName = (userName, navigate) => {
                     payload: userName,
                 })
             } else if (response.status === 401) {
-                localStorage.removeItem("token")
-                sessionStorage.removeItem("token")
+                dispatch(logoutUser())
                 navigate("/sign-in")
             } else {
                 console.log("Failed to update user name")

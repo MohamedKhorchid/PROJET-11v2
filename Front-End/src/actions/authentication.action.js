@@ -1,10 +1,12 @@
 export const USER_LOGIN_SUCCESS = "USER_LOGIN_SUCCESS"
+export const USER_REMEMBER_TOKEN = "USER_REMEMBER_TOKEN"
 export const USER_LOGIN_FAILURE = "USER_LOGIN_FAILURE"
 export const LOGOUT_USER = "LOGOUT_USER"
 
 
-export const userLoginSuccess = () => ({
+export const userLoginSuccess = (token) => ({
     type: USER_LOGIN_SUCCESS,
+    payload: token,
 })
 
 
@@ -14,13 +16,9 @@ export const userLoginFailure = (error) => ({
 })
 
 
-export const logoutUser = () => {
-    localStorage.removeItem("token")
-    sessionStorage.removeItem("token")
-    return {
-        type: LOGOUT_USER,
-    }
-}
+export const logoutUser = () => ({
+    type: LOGOUT_USER,
+})
 
 
 export const loginUser = (email, password, navigate, remember) => {
@@ -43,20 +41,12 @@ export const loginUser = (email, password, navigate, remember) => {
 
         .then((data) => {
             const token = data.body.token
-            if (remember) {
-                localStorage.setItem("token", token)
-            } else {
-                sessionStorage.setItem("token", token)
-            }
-            dispatch(userLoginSuccess())
+            dispatch(userLoginSuccess(token))
             navigate("/user")
-            
         })
 
         .catch((error) => {
             dispatch(userLoginFailure("identifiants incorrects"))
-            localStorage.removeItem("token")
-            sessionStorage.removeItem("token")
         })
     }
 }

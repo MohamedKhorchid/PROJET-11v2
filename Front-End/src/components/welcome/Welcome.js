@@ -6,20 +6,17 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Welcome() {
-    const userProfile = useSelector((state) => state.user.userProfile)
-
-    
-    const [isEditing, setIsEditing] = useState(false);
+    const token = useSelector((state) => state.auth.token)
+    const userProfile = useSelector((state) => state.user.userProfile) 
+    const [isEditing, setIsEditing] = useState(false)
+    const [newUserName, setNewUserName] = useState(userProfile.userName)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
 
     function editButtonClick() {
         setIsEditing(true)
     }
-
-
-    const [newUserName, setNewUserName] = useState(userProfile.userName);
-
-
 
     function cancelButtonClick(e) {
         e.preventDefault()
@@ -27,16 +24,11 @@ function Welcome() {
         setNewUserName(userProfile.userName)
     }
 
-
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-
     function saveButtonClick(e) {
         e.preventDefault()
-        dispatch(updateUserName(newUserName, navigate))
+        dispatch(updateUserName(newUserName, navigate, token))
         setIsEditing(false)
     }
-
 
     useEffect(() => {
         dispatch(fetchUserProfile())

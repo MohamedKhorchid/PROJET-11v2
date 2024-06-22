@@ -6,12 +6,10 @@ import { logoutUser } from "../../actions/authentication.action";
 import { useEffect } from "react";
 
 function Navigation() {
-    const tokenLocalStorage = localStorage.getItem("token")
-    const tokenSessionStorage = sessionStorage.getItem("token")
-    const token = tokenLocalStorage || tokenSessionStorage
-
+    const token = useSelector((state) => state.auth.token)
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const userProfile = useSelector((state) => state.user.userProfile)
 
     const signOut = (e) => {
         e.preventDefault()
@@ -22,11 +20,9 @@ function Navigation() {
 
     useEffect(() => {
         if (token) {
-            dispatch(fetchUserProfile());
+            dispatch(fetchUserProfile(token));
         }
     }, [token])
-
-    const userProfile = useSelector((state) => state.user.userProfile)
 
 
     if (token) {
