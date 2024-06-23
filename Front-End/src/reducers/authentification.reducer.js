@@ -1,4 +1,4 @@
-import { USER_LOGIN_SUCCESS, USER_REMEMBER_TOKEN, USER_LOGIN_FAILURE, LOGOUT_USER } from "../actions/authentication.action.js"
+import { USER_LOGIN_SUCCESS, USER_LOGIN_FAILURE, LOGOUT_USER } from "../actions/authentication.action.js"
 
 const initialState = {
     loginError: null,

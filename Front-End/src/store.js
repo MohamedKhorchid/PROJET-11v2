@@ -7,7 +7,7 @@ const store = configureStore({
     auth: authentificationReducer,
     user: userReducer,
   },
-  devTools: true, //a changer en false quand le projet est terminé, true uniquement pendant le développement,
+  devTools: false, //a changer en false quand le projet est terminé, true uniquement pendant le développement,
 })
 
 export default store

@@ -13,7 +13,6 @@ function Welcome() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-
     function editButtonClick() {
         setIsEditing(true)
     }
@@ -31,15 +30,13 @@ function Welcome() {
     }
 
     useEffect(() => {
-        dispatch(fetchUserProfile())
+        dispatch(fetchUserProfile(token))
     }, [dispatch])
 
-    
     useEffect(() => {
         setNewUserName(userProfile.userName);
     }, [userProfile])
   
-
     return(
         <div >
             {isEditing ? (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector} from "react-redux";
-import { loginUser, userRememberToken } from "../../actions/authentication.action.js"
+import { loginUser } from "../../actions/authentication.action.js"
 import { useNavigate  } from "react-router-dom";
 import "../../components/loginform/loginform.css"
 
@@ -13,7 +13,6 @@ function LoginForm() {
     const loginError = useSelector((state) => state.auth.loginError)
     let errorMessage = ""
 
-
     if (loginError) {
         errorMessage = <span className="form__error__message">{loginError}</span>
     }
@@ -22,7 +21,6 @@ function LoginForm() {
         e.preventDefault()
         dispatch(loginUser(email, password, navigate, remember))
     }
-
 
     return(
         <div className="form__box">

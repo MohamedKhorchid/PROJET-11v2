@@ -16,14 +16,12 @@ function Navigation() {
         dispatch(logoutUser())
         navigate("/sign-in")
     }
-    
 
     useEffect(() => {
         if (token) {
             dispatch(fetchUserProfile(token));
         }
     }, [token])
-
 
     if (token) {
         return (
